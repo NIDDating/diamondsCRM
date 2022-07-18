@@ -1,0 +1,40 @@
+@import "../../index.scss";
+
+.button {
+  display: inline-block;
+  flex-direction: row;
+  padding: 13px 32px;
+  border: solid 1px;
+  border-radius: 8px;
+  -webkit-transition:  all 0.15s ease;
+  -moz-transition:  all 0.15s ease;
+  -o-transition:  all 0.15s ease;
+  transition: all 0.15s ease;
+  cursor: pointer;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &.primary {
+    background: #E6B43F;
+    color: #FFFFFF;
+    border-color: #E6B43F;
+
+    &:hover {
+      background: lighten(#E6B43F, 20%);
+      border-color: lighten(#E6B43F, 20%);
+    }
+  }
+
+  &.secondary {
+    background: #FFFFFF;
+    border-color: $color-divider;
+
+    &:hover {
+      background: #EEF1F5;
+      border-color: #EEF1F5;
+    }
+  }
+}

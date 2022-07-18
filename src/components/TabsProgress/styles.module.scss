@@ -1,0 +1,52 @@
+@import "../../index.scss";
+
+.tabsProgress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 48px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 32px;
+  }
+
+  .wrap {
+    .bar {
+      height: 4px;
+      margin-bottom: 8px;
+      border-radius: 2px;
+    }
+
+    &.inactive {
+      width: 5%;
+
+      .bar {
+        background: #EEF1F5;
+      }
+    }
+
+    &.active {
+      width: 50%;
+      text-align: center;
+      color: #E6B43F;
+
+      .bar {
+        background: #E6B43F;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 425px) {
+        font-size: 12px;
+      }
+    }
+
+    &.completed {
+      .bar {
+        background: #3AB454;
+      }
+    }
+  }
+}

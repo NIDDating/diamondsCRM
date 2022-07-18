@@ -1,0 +1,173 @@
+@import "../../index.scss";
+
+
+.appearance {
+  .right,
+  .left {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .right {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    width: 50%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #FCF7EC;
+  }
+
+  .left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+
+    .topbar {
+      margin-bottom: 16px;
+      border-bottom: solid 1px $color-divider;
+
+      .container {
+        .wrap {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 0;
+        }
+      }
+    }
+
+    .container {
+      padding-left: 20%;
+      padding-right: 20%;
+
+      .questionHeader {
+        margin-bottom: 32px;
+
+        span {
+          color: $color-secondary;
+        }
+      }
+
+      .variants {
+        margin-bottom: 32px;
+
+        & > * {
+          margin-bottom: 8px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .progressBar {
+      margin-top: 40px;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .left {
+      width: 50%;
+
+      .container {
+        padding-left: $container-padding-1024;
+        padding-right: $container-padding-1024;
+      }
+    }
+    .right {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .left {
+      width: 60%;
+
+      .container {
+        padding-left: $container-padding-1024;
+        padding-right: $container-padding-1024;
+      }
+    }
+    .right {
+      width: 40%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .left {
+      width: 100%;
+      min-height: auto;
+
+      .container {
+        padding-left: $container-padding-768;
+        padding-right: $container-padding-768;
+      }
+    }
+    .right {
+      position: relative;
+      width: 100%;
+      min-height: auto;
+      height: 480px !important;
+
+      & > div {
+        height: 502px;
+        width: 201px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .left {
+      .container {
+        padding-left: $container-padding-425;
+        padding-right: $container-padding-425;
+      }
+    }
+
+    .right {
+      overflow: hidden;
+      align-items: flex-start;
+      height: 320px !important;
+
+      & > div {
+        height: 320px;
+        width: 128.153px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobileOnly {
+    display: none !important;
+  }
+  .desktopOnly {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .right {
+    margin-bottom: 32px;
+  }
+
+  .mobileOnly {
+    display: block;
+  }
+
+  .desktopOnly {
+    display: none !important;
+  }
+}

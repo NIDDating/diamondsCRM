@@ -1,0 +1,17 @@
+@import "../../index.scss";
+
+.upload {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 128px;
+  width: 100%;
+  background: #F1F3F5;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten(#F1F3F5, 1%);
+  }
+}

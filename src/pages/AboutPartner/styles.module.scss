@@ -1,0 +1,75 @@
+@import "../../index.scss";
+
+
+.test {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    width: 100%;
+    min-height: 100vh;
+
+    .container {
+      padding-left: 33.33%;
+      padding-right: 33.33%;
+
+      .questionHeader {
+        margin-bottom: 40px;
+
+        span {
+          color: $color-secondary;
+        }
+      }
+
+      .variants {
+        margin-bottom: 32px;
+
+        & > * {
+          margin-bottom: 24px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    @media screen and (max-width: 1440px) {
+      .container {
+        padding-left: $container-padding-1440;
+        padding-right: $container-padding-1440;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .container {
+        padding-left: $container-padding-1024;
+        padding-right: $container-padding-1024;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .container {
+        padding-left: $container-padding-768;
+        padding-right: $container-padding-768;
+      }
+    }
+    @media screen and (max-width: 425px) {
+      .container {
+        padding-left: $container-padding-425;
+        padding-right: $container-padding-425;
+      }
+    }
+
+    .progressBar {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../index.scss";
+
+.topbar {
+  margin-bottom: 16px;
+  border-bottom: solid 1px $color-divider;
+
+  .link {
+    cursor: pointer;
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+
+    .right {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-content: center;
+      height: 24px;
+
+      & > :first-child {
+        margin-right: 24px;
+      }
+
+      & > :last-child {
+        color: $color-secondary;
+      }
+
+      button {
+        box-shadow: none !important;
+        outline: none !important;
+        display: inline-block;
+        background: transparent !important;
+        margin-top: -4px;
+        border: 0;
+        color: #000 !important;
+        padding: 0;
+        line-height: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.constructor {
+  position: relative;
+  width: 320px;
+  height: 780px;
+
+  .base, .chest, .booty, .hair, .eyes {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .chest {
+    z-index: 2;
+  }
+
+  .booty {
+    z-index: 2;
+  }
+
+  .hair {
+    z-index: 4;
+  }
+
+  .eyes {
+    z-index: 3;
+  }
+}
+
+@media screen and (max-height: 780px) {
+  .constructor {
+    height: 640px;
+    width: 262px;
+  }
+}
+@media screen and (max-height: 640px) {
+  .constructor {
+    height: 480px;
+    width: 196px;
+  }
+}

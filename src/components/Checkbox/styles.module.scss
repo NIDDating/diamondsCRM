@@ -1,0 +1,60 @@
+@import "../../index.scss";
+
+.checkbox {
+  label {
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+
+    & + label {
+      background: #F6F8FA;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 46px;
+      @extend %TEXT-16;
+      padding-right: 16px;
+      padding-left: 16px;
+      border-radius: 8px;
+      border: solid 1px #F6F8FA;
+
+      .dot {
+        width: 24px;
+        height: 24px;
+        background: #E1E4E7;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .active {
+          display: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          background: transparent;
+        }
+      }
+    }
+
+    &:disabled + label {
+      opacity: 0.5;
+    }
+
+    &:checked + label {
+      background: #FCF7EC;
+      border: solid 1px #E6B43F;
+
+      .dot {
+        background: #E6B43F;
+
+        .active {
+          display: block;
+        }
+      }
+    }
+  }
+}

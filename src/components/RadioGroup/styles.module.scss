@@ -1,0 +1,79 @@
+@import "../../index.scss";
+
+#toggle:checked ~ .control-me::after {
+  content: "😩";
+}
+
+.checkbox {
+  label {
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+
+    & + label {
+      background: #F6F8FA;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      @extend %TEXT-16;
+      padding-right: 16px;
+      padding-left: 16px;
+      border-radius: 8px;
+      border: solid 1px #F6F8FA;
+      -webkit-transition:  all 0.15s ease;
+      -moz-transition:  all 0.15s ease;
+      -o-transition:  all 0.15s ease;
+      transition: all 0.15s ease;
+
+      &:hover {
+        background: lighten(#F6F8FA, 1%);
+        border-color: lighten(#F6F8FA, 1%);
+      }
+
+      .dot {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        margin-left: 16px;
+        background: #E1E4E7;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-transition:  all 0.15s ease;
+        -moz-transition:  all 0.15s ease;
+        -o-transition:  all 0.15s ease;
+        transition: all 0.15s ease;
+
+        .active {
+          width: 12px;
+          height: 12px;
+          border-radius: 100%;
+          background: transparent;
+          -webkit-transition:  all 0.15s ease;
+          -moz-transition:  all 0.15s ease;
+          -o-transition:  all 0.15s ease;
+          transition: all 0.15s ease;
+        }
+      }
+    }
+
+    &:checked + label {
+      background: #FCF7EC;
+      border: solid 1px #E6B43F;
+
+      .dot {
+        background: #E6B43F;
+
+        .active {
+          background: white;
+        }
+      }
+    }
+  }
+}

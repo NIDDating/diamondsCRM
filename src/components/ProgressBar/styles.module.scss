@@ -1,0 +1,23 @@
+.progressBar {
+  margin-bottom: 24px;
+  margin-top: 128px;
+
+  .base {
+    position: relative;
+    height: 4px;
+    background: #EEF1F5;
+    border-radius: 2px;
+    margin-bottom: 12px;
+
+    .bar {
+      position: absolute;
+      height: 4px;
+      background: #3AB454;
+      border-radius: 2px;
+      -webkit-transition: width 0.25s ease-in-out;
+      -moz-transition: width 0.25s ease-in-out;
+      -o-transition: width 0.25s ease-in-out;
+      transition: width 0.25s ease-in-out;
+    }
+  }
+}

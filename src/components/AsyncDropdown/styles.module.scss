@@ -1,0 +1,37 @@
+@import "../../index.scss";
+
+.select {
+  * {
+    @extend %TEXT-16;
+  }
+
+  & > :nth-child(2) {
+    border: 0;
+    background: #F1F3F5;
+    border-radius: 8px;
+    -webkit-transition:  all 0.15s ease;
+    -moz-transition:  all 0.15s ease;
+    -o-transition:  all 0.15s ease;
+    transition: all 0.15s ease;
+    box-shadow: none;
+
+    &:hover {
+      background: lighten(#F6F8FA, 1%);
+      border-color: lighten(#F6F8FA, 1%);
+    }
+
+    & > :nth-child(1) {
+      padding: 11px 16px;
+    }
+
+    & > :nth-child(2) {
+      span {
+        display: none;
+      }
+
+      div {
+        margin-right: 12px;
+      }
+    }
+  }
+}
